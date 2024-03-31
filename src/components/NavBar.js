@@ -17,14 +17,18 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="nav-bar">
-      <h1>React Chat</h1>
+    <nav className="flex items-center justify-between p-6 px-4 bg-blue-500 text-white">
+      <h1 className="text-2xl font-bold">React Chat</h1>
       {user ? (
-        <button onClick={signOut} className="sign-out" type="button">
+        <button
+          onClick={signOut}
+          className="p-2 rounded bg-red-500"
+          type="button"
+        >
           Sign Out
         </button>
       ) : (
-        <button className="sign-in">
+        <button className="p-2 rounded bg-blue-500">
           <img
             onClick={googleSignIn}
             src={GoogleSignin}

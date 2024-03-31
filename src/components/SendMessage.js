@@ -23,7 +23,10 @@ const SendMessage = ({ scroll }) => {
     scroll.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <form onSubmit={(event) => sendMessage(event)} className="send-message">
+    <form
+      onSubmit={(event) => sendMessage(event)}
+      className="send-message flex items-center p-4 bg-gray-200"
+    >
       <label htmlFor="messageInput" hidden>
         Enter Message
       </label>
@@ -31,12 +34,17 @@ const SendMessage = ({ scroll }) => {
         id="messageInput"
         name="messageInput"
         type="text"
-        className="form-input__input"
+        className="form-input__input bg-gray-100 border border-gray-300 rounded-md py-2 px-4 block w-full appearance-none leading-normal"
         placeholder="type message..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-      <button type="submit">Send</button>
+      <button
+        type="submit"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Send
+      </button>
     </form>
   );
 };

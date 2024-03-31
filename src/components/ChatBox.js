@@ -31,20 +31,21 @@ const ChatBox = () => {
       );
       setMessages(sortedMessages);
     });
-    return () => unsubscribe;
+
+    return unsubscribe;
   }, []);
 
   return (
-    <main className="chat-box">
-      <div className="messages-wrapper">
-        {messages?.map((message) => (
+    <div className="flex flex-col h-full p-4 bg-gray-100">
+      <div className="overflow-auto" ref={scroll}>
+        {messages.map((message) => (
           <Message key={message.id} message={message} />
         ))}
       </div>
-      {/* when a new message enters the chat, the screen scrolls down to the scroll div */}
-      <span ref={scroll}></span>
-      <SendMessage scroll={scroll} />
-    </main>
+      <div className="mt-auto">
+        <SendMessage scroll={scroll} />
+      </div>
+    </div>
   );
 };
 
