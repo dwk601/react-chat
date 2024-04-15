@@ -11,7 +11,7 @@ const Welcome = () => {
 
   return (
     <main className="flex flex-col items-center justify-center h-screen p-4 bg-gray-100 text-center">
-      <h2 className="mb-4 text-2xl font-bold text-gray-800">
+      <h2 className="mb-4 text-3xl font-bold text-gray-800">
         Welcome to React Chat.
       </h2>
       <img
@@ -21,10 +21,10 @@ const Welcome = () => {
         width={50}
         height={50}
       />
-      <p className="mb-4 text-gray-600">
+      <p className="mb-4 text-lg text-gray-600">
         Sign in with Google to chat with your fellow React Developers.
       </p>
-      <button className="p-2 bg-blue-500 text-white rounded">
+      <button className="p-2 bg-blue-500 text-white rounded-lg shadow-md">
         <img
           onClick={googleSignIn}
           src={GoogleSignin}

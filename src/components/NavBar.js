@@ -17,12 +17,12 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between p-6 px-4 bg-blue-500 text-white">
-      <h1 className="text-2xl font-bold">React Chat</h1>
+    <nav className="flex items-center justify-between p-6 bg-white shadow-md">
+      <h1 className="text-2xl font-bold text-gray-800">React Chat</h1>
       {user ? (
         <button
           onClick={signOut}
-          className="p-2 rounded bg-red-500"
+          className="p-2 rounded bg-red-500 text-white"
           type="button"
         >
           Sign Out

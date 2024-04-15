@@ -36,7 +36,7 @@ const ChatBox = () => {
   }, []);
 
   return (
-    <div className="flex flex-col h-full p-4 bg-gray-100">
+    <div className="flex flex-col h-full p-4 bg-gray-100 rounded-lg shadow-md">
       <div className="overflow-auto" ref={scroll}>
         {messages.map((message) => (
           <Message key={message.id} message={message} />

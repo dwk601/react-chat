@@ -25,7 +25,7 @@ const SendMessage = ({ scroll }) => {
   return (
     <form
       onSubmit={(event) => sendMessage(event)}
-      className="send-message flex items-center p-4 bg-gray-200"
+      className="send-message flex items-center p-4 bg-white shadow-md rounded-lg"
     >
       <label htmlFor="messageInput" hidden>
         Enter Message
@@ -41,7 +41,7 @@ const SendMessage = ({ scroll }) => {
       />
       <button
         type="submit"
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2"
       >
         Send
       </button>
